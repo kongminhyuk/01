@@ -23,12 +23,46 @@
 #data_summ = load_dataset("lbox/lbox_open", "summarization")
 
 ## 프로젝트 개요
-판례검색프로그램 제작
+제목: 판례검색프로그램
 =======
 |UI|임유림|
 |자연어처리|방가윤, 허정원, 김지우|
 |챗봇모델생성|정도훈|
 |ML Engineering|방가윤, 허정원, 김지우|
+
+기능: 키워드를 입력하면 관련도 순으로 판례를 제공
+
+사례
+사건번호, 키워드를 입력받아 판례 검색서비스를 지원하는 기존의 LBOX 서비스
+링크: https://lbox.kr/v2
+
+실행방법
+웹 API지그
+
+라이브러리 - 데이터셋
+lbox_open
+datasets
+
+라이브러리 - NLP
+transformers
+rouge_score
+
+라이브러리 - 인공지능 모델 학습
+pytorch_lightning
+matplotlib.pyplot
+
+라이브러리 - API 및 배포
+--upgrade setuptools
+openai
+fastapi
+
+개발환경 및 언어
+구글 colab
+파이썬
+torch, 
+
+참고
+https://github.com/lbox-kr/lbox_open.git
 
 ## 사용 모델
 [데이터](https://blog.lbox.kr/lbox-open)
