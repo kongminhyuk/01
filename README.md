@@ -2,38 +2,44 @@
 
 ## 프로젝트 개요
 ### 제목: 판례검색프로그램
+### 소개: 판례를 챗봇의 형태로 검색할 수 있게 해주는 프로그램으로 보다 편리한 판례 및 법률 관련 정보를 검색 및확인할 수 있도록 도움을 주는 프로그램입니다.
 =======
 
-#### 기능: 키워드를 입력하면 관련도 순으로 판례를 제공
+#### 기능: 판례 및 키워드를 검색하면 인공지능이 유사성을 판단하여 관련 법률 및 판례 정보를 제공
 
 #### 사례
 사건번호, 키워드를 입력받아 판례 검색서비스를 지원하는 기존의 LBOX 서비스
 링크: https://lbox.kr/v2
 
 #### 실행방법
-웹 API지그
+웹 인터페이스를 통해 검색하고자 하는 사례 및 키워드를 입력
+인공지능이 가장 유사한 법률 및 판례 정보를 사용자에게 제공
 
-#### 라이브러리 - 데이터셋
-lbox_open
+#### 라이브러리
+## 데이터셋
 datasets
+!git clone https://github.com/lbox-kr/lbox_open.git
 
-#### 라이브러리 - NLP
+## NLP
 transformers
 rouge_score
+sentencepiece
+torch
 
-#### 라이브러리 - 인공지능 모델 학습
+## 인공지능 모델 학습
 pytorch_lightning
-matplotlib.pyplot
+MT5ForConditionalGeneration
 
-#### 라이브러리 - API 및 배포
---upgrade setuptools
+## API 및 배포
 openai
-fastapi
+gpt-3.5-turbo
 
 #### 개발환경 및 언어
 구글 colab
 파이썬
-torch, 
+
+#### 사용 예제
+-
 
 #### 참고
 https://github.com/lbox-kr/lbox_open.git
@@ -46,7 +52,7 @@ https://github.com/lbox-kr/lbox_open.git
 |chatgpt api|정도훈|
 |ML Engineering|공민혁, 허정원|
 
-## 사용 모델
+## 데이터셋
 [데이터](https://blog.lbox.kr/lbox-open)
 # case corpus
 #data_corpus = load_dataset("lbox/lbox_open", "case_corpus")
@@ -60,6 +66,3 @@ https://github.com/lbox-kr/lbox_open.git
 # case summarization task
 #data_summ = load_dataset("lbox/lbox_open", "summarization")
 
-
-## 사용 모델
-[데이터](https://blog.lbox.kr/lbox-open)
